@@ -4,9 +4,9 @@ public class piglatin {// class started
         int first_vowel_at = word.length();
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
-            if (ch == 'A' ||ch == 'E' ||ch == 'I' || ch == 'O' || ch == 'U'){
+            if ("AEIOU".indexOf(ch)>=0){
                 first_vowel_at=i;
-                System.out.println("Word in Piglatin: "+ word.substring(first_vowel_at ,word.length()) + word.substring(0 ,first_vowel_at-1) + "AY");
+                System.out.println("Word in Piglatin: "+ word.substring(first_vowel_at) + word.substring(0 ,first_vowel_at) + "AY");
                 break;
             }
         }
@@ -14,6 +14,6 @@ public class piglatin {// class started
     }
     public static void main(String[] args) {
         piglatin obj = new piglatin();
-        obj.display("London");
+        obj.display("yasshita");
     }
 }
